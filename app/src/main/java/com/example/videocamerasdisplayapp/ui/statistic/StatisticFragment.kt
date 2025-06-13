@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.videocamerasdisplayapp.databinding.FragmentStatisticBinding
+import com.example.videocamerasdisplayapp.databinding.FragmentStatisticPageBinding
 
 class StatisticFragment : Fragment() {
 
-    private var _binding: FragmentStatisticBinding? = null
+    private var _binding: FragmentStatisticPageBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -17,7 +17,7 @@ class StatisticFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentStatisticBinding.inflate(inflater, container, false)
+        _binding = FragmentStatisticPageBinding.inflate(inflater, container, false)
         val root = binding.root
 
         return root

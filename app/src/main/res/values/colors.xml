@@ -9,4 +9,10 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="main">#159829</color>
+    <color name="main_variant">#226B2D</color>
+    <color name="drawer_0">#004525</color>
+    <color name="drawer_100">#008044</color>
+    <color name="item_bg_light">#EFEFEF</color>
+    <color name="item_bg_dark">#1F1F1F</color>
+    <color name="drag_element">#80DDDDDD</color>
 </resources>

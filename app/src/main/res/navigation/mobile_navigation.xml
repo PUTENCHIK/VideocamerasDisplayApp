@@ -9,30 +9,30 @@
         android:id="@+id/nav_classes"
         android:name="com.example.videocamerasdisplayapp.ui.classes.ClassesFragment"
         android:label="@string/menu_classes"
-        tools:layout="@layout/fragment_classes" />
+        tools:layout="@layout/fragment_classes_page" />
 
     <fragment
         android:id="@+id/nav_snapshots"
         android:name="com.example.videocamerasdisplayapp.ui.snapshots.SnapshotsFragment"
         android:label="@string/menu_snapshots"
-        tools:layout="@layout/fragment_snapshots" />
+        tools:layout="@layout/fragment_snapshots_page" />
 
     <fragment
         android:id="@+id/nav_cameras"
         android:name="com.example.videocamerasdisplayapp.ui.cameras.CamerasFragment"
         android:label="@string/menu_cameras"
-        tools:layout="@layout/fragment_cameras" />
+        tools:layout="@layout/fragment_cameras_page" />
 
     <fragment
         android:id="@+id/nav_statistic"
         android:name="com.example.videocamerasdisplayapp.ui.statistic.StatisticFragment"
         android:label="@string/menu_statistic"
-        tools:layout="@layout/fragment_statistic" />
+        tools:layout="@layout/fragment_statistic_page" />
 
     <fragment
         android:id="@+id/nav_about"
         android:name="com.example.videocamerasdisplayapp.ui.about.AboutFragment"
         android:label="@string/menu_about"
-        tools:layout="@layout/fragment_about" />
+        tools:layout="@layout/fragment_about_page" />
 
 </navigation>

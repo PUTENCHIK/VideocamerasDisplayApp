@@ -1,6 +1,7 @@
 package com.example.videocamerasdisplayapp
 
 import android.os.Bundle
+import android.util.Log
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -14,6 +15,8 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.videocamerasdisplayapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+
+    val TAG = "main_activity"
 
     private lateinit var appBarConfiguration: AppBarConfiguration
     private lateinit var binding: ActivityMainBinding
@@ -34,8 +37,7 @@ class MainActivity : AppCompatActivity() {
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+
         appBarConfiguration = AppBarConfiguration(
             setOf(R.id.nav_classes, R.id.nav_snapshots, R.id.nav_cameras, R.id.nav_statistic,
                 R.id.nav_about),
@@ -46,7 +48,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.main, menu)
         return true
     }

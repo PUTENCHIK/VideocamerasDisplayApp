@@ -1,15 +1,15 @@
-package com.example.videocamerasdisplayapp.ui.about
+package com.example.videocamerasdisplayapp.ui.common
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.videocamerasdisplayapp.databinding.FragmentAboutPageBinding
+import com.example.videocamerasdisplayapp.databinding.FragmentLoadingBinding
 
-class AboutFragment : Fragment() {
+class DataLoadingFragment : Fragment() {
 
-    private var _binding: FragmentAboutPageBinding? = null
+    private var _binding: FragmentLoadingBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -17,14 +17,9 @@ class AboutFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAboutPageBinding.inflate(inflater, container, false)
+        _binding = FragmentLoadingBinding.inflate(inflater, container, false)
         val root = binding.root
 
         return root
-    }
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
     }
 }

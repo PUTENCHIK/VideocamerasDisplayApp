@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.example.videocamerasdisplayapp.databinding.FragmentCamerasBinding
+import com.example.videocamerasdisplayapp.databinding.FragmentCamerasPageBinding
 
 class CamerasFragment : Fragment() {
 
-    private var _binding: FragmentCamerasBinding? = null
+    private var _binding: FragmentCamerasPageBinding? = null
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -17,7 +17,7 @@ class CamerasFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentCamerasBinding.inflate(inflater, container, false)
+        _binding = FragmentCamerasPageBinding.inflate(inflater, container, false)
         val root = binding.root
 
         return root
