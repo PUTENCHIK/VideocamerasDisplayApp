@@ -15,4 +15,5 @@
     <color name="item_bg_light">#EFEFEF</color>
     <color name="item_bg_dark">#1F1F1F</color>
     <color name="drag_element">#80DDDDDD</color>
+    <color name="transparent">#00000000</color>
 </resources>

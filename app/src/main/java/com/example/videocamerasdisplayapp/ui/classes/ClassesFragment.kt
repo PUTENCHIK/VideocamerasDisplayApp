@@ -17,6 +17,7 @@ import com.example.videocamerasdisplayapp.ui.common.PageState
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import okio.IOException
 import kotlin.getValue
 
@@ -40,6 +41,7 @@ class ClassesFragment : Fragment() {
         val root = binding.root
         fm = requireActivity().supportFragmentManager
 
+        binding.fab.setOnClickListener { fabOnClick() }
         displayLoading()
         loadClasses()
 
@@ -57,14 +59,27 @@ class ClassesFragment : Fragment() {
             try {
                 classes = NetworkModule.classes.get()
                 viewModel.setData(classes)
-                displayClassesList()
+                withContext(Dispatchers.Main) {
+                    displayClassesList()
+                }
             } catch (e: IOException) {
                 Log.e(TAG, "No internet connection: ${e.message}")
-                displayError()
+                withContext(Dispatchers.Main) {
+                    displayError()
+                }
             } catch (e: Exception) {
                 Log.e(TAG, "Unknown error: ${e.message}")
-                displayError()
+                withContext(Dispatchers.Main) {
+                    displayError()
+                }
             }
+        }
+    }
+
+    fun fabOnClick() {
+        if (state != PageState.ADD_CLASS) {
+            state = PageState.ADD_CLASS
+            updateContentWithState()
         }
     }
 
@@ -92,9 +107,22 @@ class ClassesFragment : Fragment() {
     fun updateContentWithState() {
         var fragment: Fragment? = null
         fragment = when (state) {
-            PageState.LOADING -> DataLoadingFragment()
-            PageState.ERROR -> ErrorFragment()
-            PageState.CLASSES_LIST -> ClassesListFragment()
+            PageState.LOADING -> {
+                binding.fab.visibility = View.INVISIBLE
+                DataLoadingFragment()
+            }
+            PageState.ERROR -> {
+                binding.fab.visibility = View.INVISIBLE
+                ErrorFragment()
+            }
+            PageState.CLASSES_LIST -> {
+                binding.fab.visibility = View.VISIBLE
+                ClassesListFragment()
+            }
+            PageState.ADD_CLASS -> {
+                binding.fab.visibility = View.INVISIBLE
+                ClassPageFragment()
+            }
             else -> null
         }
         fragment?.let {

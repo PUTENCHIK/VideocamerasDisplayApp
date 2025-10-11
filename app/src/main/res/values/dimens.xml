@@ -8,19 +8,25 @@
     <dimen name="loading_label_vertical_margin">8dp</dimen>
     <dimen name="class_item_padding">15dp</dimen>
     <dimen name="item_header_gap">15dp</dimen>
-    <dimen name="classes_list_padding">15dp</dimen>
+    <dimen name="page_content_padding">15dp</dimen>
     <dimen name="classes_list_gap">15dp</dimen>
     <dimen name="item_body_padding">10dp</dimen>
     <dimen name="item_content_gap">20dp</dimen>
     <dimen name="item_datetime_gap">8dp</dimen>
+    <dimen name="field_margin">25dp</dimen>
+    <dimen name="color_display_margin">16dp</dimen>
+    <dimen name="button_margin">20dp</dimen>
 
     <!-- Sizes -->
     <dimen name="nav_drawer_logo_size">80dp</dimen>
     <dimen name="color_display_size">30dp</dimen>
     <dimen name="image_button_size">40dp</dimen>
     <dimen name="image_button_image_size">24dp</dimen>
+    <dimen name="secondary_button_stroke_width">1dp</dimen>
 
     <!-- Fonts -->
+    <dimen name="h2">20sp</dimen>
+    <dimen name="h2_margin">12dp</dimen>
     <dimen name="p">16sp</dimen>
     <dimen name="span">14sp</dimen>
 </resources>

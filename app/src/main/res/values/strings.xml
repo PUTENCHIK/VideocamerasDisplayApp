@@ -5,8 +5,11 @@
     <string name="nav_header_title">Videocamera Logging</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="fab_classes_desc">Добавить класс</string>
     <string name="button_edit_desc">Редактировать</string>
     <string name="button_delete_desc">Удалить</string>
+    <string name="button_close_text">Закрыть</string>
+    <string name="button_add_class_text">Добавить класс</string>
 
     <string name="menu_classes">Классы</string>
     <string name="menu_snapshots">Снимки</string>
@@ -15,6 +18,7 @@
     <string name="menu_about">О проекте</string>
 
     <string name="loading_label">Данные загружаются</string>
+    <string name="add_class_title">Добавить новый класс</string>
 
     <string name="item_class_label_value">Метка: %d</string>
     <string name="item_class_id_label">ID</string>
@@ -25,4 +29,12 @@
     <string name="item_class_title_value">%s</string>
     <string name="item_class_created_at_label">Добавлен:</string>
     <string name="item_class_created_at_value">%s</string>
+
+    <string name="class_page_name_label">Системное имя:</string>
+    <string name="class_page_name_hint">human</string>
+    <string name="class_page_label_label">Метка:</string>
+    <string name="class_page_label_hint">целое неотрицательное число</string>
+    <string name="class_page_title_label">Название:</string>
+    <string name="class_page_title_hint">понятное вам описание</string>
+    <string name="class_page_color_label">Цвет для отображения:</string>
 </resources>

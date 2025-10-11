@@ -4,8 +4,8 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingStart="@dimen/classes_list_padding"
-    android:paddingEnd="@dimen/classes_list_padding">
+    android:paddingStart="@dimen/page_content_padding"
+    android:paddingEnd="@dimen/page_content_padding">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/classes_recycler"
